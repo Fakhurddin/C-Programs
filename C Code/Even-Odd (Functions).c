@@ -1,19 +1,18 @@
 #include <stdio.h>
-int even_odd();
+int even_odd(int Num)
+{
+	if(Num%2==0)
+		printf("Even");
+	else
+		printf("Odd");
+}
 int main()
 {
-	even_odd();
-}
-int even_odd()
-{
-	int a;
+	int Num;
 	
-	printf("Number =  ");
-	scanf("%d",&a);
+	printf("Number: ");
+	scanf("%d",&Num);
 	
-	if(a%2==0)
-	{
-		printf("Number = Even");
-	}else
-		printf("Number = Odd");
+	even_odd(Num);
 }
+
