@@ -1,25 +1,29 @@
 #include <stdio.h>
-int armstrong();
-int main()
+int armstrong(int Num)
 {
-	armstrong();
-}
-int armstrong()
-{
-	int	num,rem,cube,sum=0;
+	int temp,rem,cube,sum=0;
 	
-	printf("Number = ");
-	scanf("%d",&num);
+	temp = Num;
 	
-	while(num!=0)
+	while(temp!=0)
 	{
-		rem=num%10;
-		num=num/10;
+		rem=temp%10;
+		temp=temp/10;
 		cube = rem*rem*rem;
 		sum = sum + cube;
 	}
-	if(sum==num)
-		printf("\nArmstrong");
+	
+	if(sum==Num)
+		printf("Armstrong");
 	else	
-		printf("\nNOT A Armstrong");
+		printf("Not a Armstrong");
+}
+int main()
+{
+	int Num;
+
+	printf("Number: ");
+	scanf("%d",&Num);
+	
+	armstrong(Num);
 }
